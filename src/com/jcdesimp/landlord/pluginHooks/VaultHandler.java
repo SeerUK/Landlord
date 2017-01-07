@@ -33,19 +33,19 @@ public class VaultHandler {
     }
 
     private boolean canAfford(Player p, double amt) {
-        return economy.getBalance(p.getName()) >= amt;
+        return economy.getBalance(p) >= amt;
     }
 
     public boolean chargeCash(Player p, double amt) {
         if (canAfford(p, amt)) {
-            EconomyResponse r = economy.withdrawPlayer(p.getName(), amt);
+            EconomyResponse r = economy.withdrawPlayer(p, amt);
             return true;
         }
         return false;
     }
 
     public boolean giveCash(Player p, double amt) {
-        EconomyResponse r = economy.depositPlayer(p.getName(), amt);
+        EconomyResponse r = economy.depositPlayer(p, amt);
         return true;
     }
 

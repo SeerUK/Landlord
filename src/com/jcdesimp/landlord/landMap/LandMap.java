@@ -306,7 +306,7 @@ public class LandMap {
         Scoreboard board = manager.getNewScoreboard();
         //Scoreboard board = manager.getMainScoreboard();
         Team team = board.registerNewTeam("teamname");
-        team.addPlayer(p);
+        team.addEntry(p.getName());
 
         FileConfiguration messages = plugin.getMessageConfig();
         final String header = messages.getString("map.header");
@@ -426,7 +426,7 @@ public class LandMap {
             Team t = board.registerNewTeam(i + "");
             t.setPrefix(mapData[i].substring(0, 5));
             t.setSuffix(mapData[i].substring(17));
-            t.addPlayer(ofp);
+            t.addEntry(ofp.getName());
             t.setDisplayName(mapData[i]);
 
 

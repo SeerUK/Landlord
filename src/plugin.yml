@@ -7,7 +7,6 @@ website: http://dev.bukkit.org/bukkit-plugins/landlord/
 softdepend: [Vault, WorldGuard]
 
 commands:
-
   landlord:
     aliases: [land, ll]
     description: The base Landlord command.
@@ -16,7 +15,6 @@ commands:
     permission-message: You don't have permission.
 
 permissions:
-
   landlord.*:
     description: Gives access to all landlord commands
     children:
